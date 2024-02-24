@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mainbody {
+    background-color: #1F1E1F;
+    text-align: center;
+    height: 91.5vh;
+    /* height: fit-content; */
+    /* height: 100vh; */
+    align-items: center;
+}
+
+h1,
+p,
+h2 {
+    color: white;
+    text-align: center;
+}
+
+/* .pop {
+  backface-visibility: hidden;
+} */
+h2 {
+    font-size: large;
+    padding-top: 20px;
+    /* transition: all 0.2s linear; */
+    /* -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden; */
+    animation: pop 1s ease-in-out infinite alternate;
+}
+
+/* h2:hover {
+  z-index: 1;
+  transform: scale(0.7) translate3d(0, 0, 0) perspective(1px);
+ }  */
+@keyframes pop {
+    0% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0 !important;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0 !important;
+}
+
+.card {
+    width: calc(72%/3);
+    margin: 2%;
+    margin-top: 0 !important;
+    padding: 2%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 170px;
+    width: 100%;
+    /* margin: 25px; */
+    align-items: center;
+}
+
+.card_name {
+    font-size: 25px;
+    line-height: 0.9;
+    font-weight: 700;
+}
+
+.card_name span {
+    font-size: 15px;
+}
+
+.card_total {
+    font-size: 50px;
+    margin: 10px 0 0 0;
+    font-weight: 700;
+}
+
+.card_small {
+    text-shadow: 4px 4px 10px rgb(44, 44, 44);
+}
+
+@media (max-width: 700px) {
+    .mainbody {
+        height: fit-content;
+    }
+    .card_total {
+        font-size: 70px;
+    }
+
+    .card {
+        width: 100%;
+        height: 290px;
+        margin-right: 0;
+        float: none;
+    }
+
+    .card .card_inner,
+    .card .card_back {
+        height: 290px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .card_total {
+            font-size: 40px;
+        }
+}
+
+.country {
+    background-color: #4D70C2 !important;
+}
+
+.recovered {
+    background-color: #29923B!important;
+}
+
+.confirmed {
+    background-color: #BCA92D!important;
+}
+
+.deaths {
+    background-color: #D6661C!important;
+}
+
+.active {
+    background-color: #355AB0!important;
+}
+
+.updated {
+    background-color: #A19352!important;
+}
+
+.card_back {
+    transform: rotateY(180deg) scale(1.1);
+    background: #141414;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card_back span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
